@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ed" />
+    <title>mây & nắng | Photo journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Về đầu trang"
+          >mây <span>&</span> nắng</a
+        >
+        <nav class="main-nav" aria-label="Điều hướng chính">
+          <a class="nav-link is-active" href="#top">Nhật ký</a>
+          <a class="nav-link" href="#collection">Bộ sưu tập</a>
+        </nav>
+        <a class="collection-button" href="#collection">
+          <span>05 khoảnh khắc</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" id="top" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-dot"></span> photo journal / 2025
+            </p>
+            <h1 id="page-title">Những ngày<br /><em>thật dịu dàng.</em></h1>
+            <p class="hero-intro">
+              Một góc nhỏ để cất giữ ánh nắng, những chuyến đi và các khoảnh
+              khắc bình yên rất riêng.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#collection"
+                >Xem bộ sưu tập <span aria-hidden="true">↓</span></a
+              >
+              <span class="hero-note"
+                >lưu lại điều<br />khiến bạn mỉm cười</span
+              >
+            </div>
+            <div class="hero-details" aria-label="Thông tin bộ ảnh">
+              <div><strong>05</strong><span>tấm ảnh</span></div>
+              <div><strong>03</strong><span>thành phố</span></div>
+              <div><strong>∞</strong><span>kỷ niệm</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-orbit hero-orbit--one"></div>
+            <div class="hero-orbit hero-orbit--two"></div>
+            <figure class="hero-photo">
+              <img
+                src="742059764_18607567210032375_813559840604352057_n.jpg"
+                alt="Chân dung cô gái đội mũ trước nền tường màu hồng"
+                fetchpriority="high"
+              />
+              <figcaption class="hero-caption">
+                <span>01 / 05</span>
+                <span>softly, softly</span>
+              </figcaption>
+            </figure>
+            <div class="floating-note">
+              <span class="sun-mark" aria-hidden="true">✳</span>
+              <span>take it<br />slowly</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="gallery-section"
+          id="collection"
+          aria-labelledby="gallery-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow-dot"></span> những điều đã thấy
+              </p>
+              <h2 id="gallery-title">Lưu giữ <em>ánh nhìn.</em></h2>
+            </div>
+            <p class="section-description">
+              Mỗi khung hình là một mẩu chuyện nhỏ.<br />Chọn một chủ đề để dạo
+              quanh.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Lọc bộ ảnh">
+            <button
+              class="filter-button is-selected"
+              type="button"
+              data-filter="all"
+            >
+              Tất cả <span>05</span>
+            </button>
+            <button class="filter-button" type="button" data-filter="portrait">
+              Chân dung <span>02</span>
+            </button>
+            <button class="filter-button" type="button" data-filter="outdoor">
+              Ngoài trời <span>02</span>
+            </button>
+            <button class="filter-button" type="button" data-filter="cozy">
+              Đời thường <span>01</span>
+            </button>
+          </div>
+
+          <div class="gallery-grid">
+            <article
+              class="photo-card card--tall"
+              data-category="portrait"
+              data-index="0"
+            >
+              <button
+                class="photo-trigger"
+                type="button"
+                aria-label="Xem ảnh chân dung đội mũ"
+              >
+                <img
+                  src="742059764_18607567210032375_813559840604352057_n.jpg"
+                  alt="Chân dung đội mũ với nền tường hồng"
+                  loading="lazy"
+                />
+                <span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <div class="card-meta"><span>01</span><span>chân dung</span></div>
+              <h3>một chút nắng<br />trên vai</h3>
+            </article>
+
+            <article
+              class="photo-card card--wide"
+              data-category="outdoor"
+              data-index="1"
+            >
+              <button
+                class="photo-trigger"
+                type="button"
+                aria-label="Xem ảnh bên bờ sông"
+              >
+                <img
+                  src="524702514_4958685877690413_1961068479897800237_n.jpg"
+                  alt="Cô gái bên bờ sông với thành phố phía sau"
+                  loading="lazy"
+                />
+                <span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <div class="card-meta">
+                <span>02</span><span>ngoài trời</span>
+              </div>
+              <h3>thành phố xanh<br />và một ngày trong veo</h3>
+            </article>
+
+            <article
+              class="photo-card card--square"
+              data-category="cozy"
+              data-index="2"
+            >
+              <button
+                class="photo-trigger"
+                type="button"
+                aria-label="Xem ảnh bên cây thông"
+              >
+                <img
+                  src="603784315_5139042266321439_5527034203884344635_n.jpg"
+                  alt="Cô gái ngồi cạnh cây thông có đèn nhỏ"
+                  loading="lazy"
+                />
+                <span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <div class="card-meta">
+                <span>03</span><span>đời thường</span>
+              </div>
+              <h3>ở đâu có<br />ánh đèn ấm</h3>
+            </article>
+
+            <article
+              class="photo-card card--small"
+              data-category="portrait"
+              data-index="3"
+            >
+              <button
+                class="photo-trigger"
+                type="button"
+                aria-label="Xem ảnh trong xe"
+              >
+                <img
+                  src="769144582_5409340269291636_4833352654378693725_n.jpg"
+                  alt="Cận cảnh cô gái trong xe với khăn hoa"
+                  loading="lazy"
+                />
+                <span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <div class="card-meta"><span>04</span><span>chân dung</span></div>
+              <h3>gió đi qua<br />khung cửa</h3>
+            </article>
+
+            <article
+              class="photo-card card--wide card--last"
+              data-category="outdoor"
+              data-index="4"
+            >
+              <button
+                class="photo-trigger"
+                type="button"
+                aria-label="Xem ảnh trên phố dưới nắng"
+              >
+                <img
+                  src="691698355_5292877800937884_8263933226049000432_n.jpg"
+                  alt="Cô gái mặc áo xanh đứng dưới nắng trên phố"
+                  loading="lazy"
+                />
+                <span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <div class="card-meta">
+                <span>05</span><span>ngoài trời</span>
+              </div>
+              <h3>đi qua một con phố<br />ngập nắng</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="closing-note" aria-label="Lời nhắn cuối trang">
+          <span class="closing-line"></span>
+          <p>“Những ngày bình thường<br />cũng xứng đáng được nhớ.”</p>
+          <span class="closing-line"></span>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>mây & nắng — một cuốn nhật ký bằng ảnh</span>
+        <a href="#top">lên đầu trang <span aria-hidden="true">↑</span></a>
+      </footer>
+    </div>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+    >
+      <div class="lightbox-backdrop" data-close></div>
+      <div class="lightbox-panel">
+        <button
+          class="icon-button lightbox-close"
+          type="button"
+          aria-label="Đóng ảnh"
+          data-close
+        >
+          ×
+        </button>
+        <div class="lightbox-image-wrap">
+          <img id="lightbox-image" src="" alt="" />
+          <button
+            class="gallery-control gallery-prev"
+            type="button"
+            aria-label="Ảnh trước"
+          >
+            ←
+          </button>
+          <button
+            class="gallery-control gallery-next"
+            type="button"
+            aria-label="Ảnh tiếp theo"
+          >
+            →
+          </button>
+        </div>
+        <div class="lightbox-info">
+          <div>
+            <span class="lightbox-counter" id="lightbox-counter">01 / 05</span>
+            <h2 id="lightbox-title">một chút nắng trên vai</h2>
+            <p id="lightbox-meta">chân dung</p>
+          </div>
+          <button
+            class="favorite-button"
+            type="button"
+            aria-label="Lưu ảnh này"
+            aria-pressed="false"
+          >
+            <span class="heart-outline" aria-hidden="true">♡</span>
+            <span class="heart-filled" aria-hidden="true">♥</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

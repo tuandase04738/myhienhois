@@ -1,9 +1,7 @@
 const photoCards = [...document.querySelectorAll('.photo-card')];
-const filterButtons = [...document.querySelectorAll('.filter-button')];
 const lightbox = document.querySelector('#lightbox');
 const lightboxImage = document.querySelector('#lightbox-image');
 const lightboxTitle = document.querySelector('#lightbox-title');
-const lightboxMeta = document.querySelector('#lightbox-meta');
 const lightboxCounter = document.querySelector('#lightbox-counter');
 const favoriteButton = document.querySelector('.favorite-button');
 const closeTriggers = [...document.querySelectorAll('[data-close]')];
@@ -13,8 +11,7 @@ const nextButton = document.querySelector('.gallery-next');
 const photos = photoCards.map((card) => ({
   image: card.querySelector('img').src,
   alt: card.querySelector('img').alt,
-  title: card.querySelector('h3').innerText.replace(/\n/g, ' '),
-  category: card.querySelector('.card-meta span:last-child').innerText,
+  title: card.querySelector('h3')?.innerText.replace(/\n/g, ' ') ?? '',
 }));
 
 let currentIndex = 0;
@@ -25,7 +22,6 @@ function updateLightbox() {
   lightboxImage.src = photo.image;
   lightboxImage.alt = photo.alt;
   lightboxTitle.textContent = photo.title;
-  lightboxMeta.textContent = photo.category;
   lightboxCounter.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
   favoriteButton.classList.toggle('is-favorite', favorites.has(currentIndex));
   favoriteButton.setAttribute('aria-pressed', favorites.has(currentIndex));
@@ -54,17 +50,6 @@ function showNextPhoto(direction) {
 photoCards.forEach((card) => {
   card.querySelector('.photo-trigger').addEventListener('click', () => {
     openLightbox(Number(card.dataset.index));
-  });
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.toggle('is-selected', item === button));
-    photoCards.forEach((card) => {
-      const shouldShow = filter === 'all' || card.dataset.category === filter;
-      card.classList.toggle('is-hidden', !shouldShow);
-    });
   });
 });
 
